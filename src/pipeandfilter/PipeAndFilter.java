@@ -22,7 +22,7 @@ public class PipeAndFilter {
         List<Function<List<Integer>, List<Integer>>> filters = new ArrayList<>();
         filters.add(PipeAndFilter::filterEvenNumbers);
         filters.add(PipeAndFilter::squareNumbers);
-        filters.add(PipeAndFilter::cubeumbers); 
+        filters.add(PipeAndFilter::cubeNumbers); 
         filters.add(PipeAndFilter::filterNumbersGreaterThanTen);
         
         // Process the input through the pipeline
@@ -55,7 +55,7 @@ public class PipeAndFilter {
     }
     
     // THIS IS NEW FILTER THAT I HAVE ADDED: Cube of each number
-    private static List<Integer> cubeumbers(List<Integer> input) {
+    private static List<Integer> cubeNumbers(List<Integer> input) {
         return input.stream()
                 .map(n -> n * n * n)
                 .collect(Collectors.toList());
